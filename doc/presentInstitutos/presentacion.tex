@@ -1,0 +1,937 @@
+\documentclass{beamer}
+
+\usepackage[spanish]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage{graphicx}
+\usepackage{listings}
+
+\usetheme{Darmstadt}
+
+\title{¿Cómo se diseña un videojuego?}
+\subtitle{... con software libre}
+\author{Manuel Palomo Duarte\\David Saltares Márquez\\Ezequiel Vázquez de la Calle}
+\date{Junio de 2012}
+
+
+\begin{document}
+
+\begin{frame}
+	\titlepage
+	
+	\begin{picture}(0,0)
+        \put(5,15){\includegraphics[scale=0.8]{images/logo_advuca.png}}
+        \put(250,25){\includegraphics[scale=0.5]{images/UCA1.jpg}}
+    \end{picture}
+	
+	\begin{center}
+		\includegraphics[scale=1]{images/cc.png}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Índice de contenidos}
+	\tableofcontents
+\end{frame}
+
+\section{Quiero crear un juego}
+
+\begin{frame}
+	\frametitle{¿Qué necesito?}
+	
+	\begin{center}
+		\includegraphics[scale=0.3]{images/opensec-tux-mario.png}
+	\end{center}
+	
+	\begin{center}
+		Quiero crear un juego, ¿y ahora qué?
+	\end{center}
+	
+	\begin{block}{Necesitamos}
+		\begin{itemize}
+			\item \emph{Hardware}: el equipo más barato nos sirve
+			\item \emph{Software}: veremos si es posible con Software Libre
+			\item \emph{\textbf{¡Muchas ganas!}}: lo más importante
+		\end{itemize}
+	\end{block}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Fases}
+	
+	\begin{center}
+		\includegraphics[scale=0.3]{images/harry.png}
+	\end{center}
+	
+	\begin{block}{Diseño}
+		\begin{itemize}
+			\item Se define qué juego se va a hacer
+			\item Personajes, enemigos, escenarios, controles
+			\item Se escribe todo en el documento de diseño
+			\item Los miembros del equipo están en el mismo barco
+		\end{itemize}
+	\end{block}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Fases}
+	
+	\begin{center}
+		\includegraphics[scale=0.12]{images/angry.png}
+	\end{center}
+	
+	\begin{block}{Prototipado}
+		\begin{itemize}
+			\item Implementamos funcionalidades básicas
+			\item No necesitamos arte de calidad
+			\item ¡Comprobamos que es divertido!
+		\end{itemize}
+	\end{block}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Fases}
+	
+	
+	\begin{center}
+		\includegraphics[scale=0.3]{images/link.png}
+	\end{center}
+	
+	\begin{block}{Vertical slice}
+		\begin{itemize}
+			\item Un nivel completo
+			\item Calidad final: mecánicas y arte
+			\item Representa el producto que se publicará
+		\end{itemize}
+	\end{block}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Fases}
+	
+	\begin{center}
+		\includegraphics[scale=0.1]{images/crazy.png}
+	\end{center}
+	
+	\begin{block}{Producción}
+		\begin{itemize}
+			\item Se completa todo el contenido del juego
+			\item Se termina de implementar el resto de mecánicas
+			\item Se solucionan el máximo número de fallos posibles
+			\item Pruebas, pruebas y más pruebas
+		\end{itemize}
+	\end{block}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Fases}
+	
+	\begin{center}
+		\includegraphics[scale=0.3]{images/world.png}
+	\end{center}
+	
+	\begin{block}{Pre-lanzamiento}	
+		\begin{itemize}
+			\item Alpha: casi acabado, lleno de bugs
+			\item Beta: pulido, aún en fase de pruebas
+			\item Gold: ¡preparados para el despegue!
+		\end{itemize}
+	\end{block}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Elementos del desarrollo}
+	
+	\begin{center}
+		\includegraphics[scale=0.1]{images/uttaresh-batman-the-dark-knight.png}
+	\end{center}
+	
+	
+	\begin{block}{Elementos}
+		\begin{itemize}
+			\item Planificación
+			\item Grafismo
+			\item Sonido
+			\item Programación
+		\end{itemize}
+	\end{block}
+\end{frame}
+
+\section{Planificación}
+
+\begin{frame}
+	\frametitle{Planner}
+
+	\begin{block}{Utilidad}
+		\begin{itemize}
+			\item Definir tareas
+			\item Precedencia entre tareas
+			\item Asignar tareas
+		\end{itemize}
+	\end{block}
+	
+	\begin{center}
+		\includegraphics[scale=0.15]{images/planner-screen.png}
+	\end{center}
+\end{frame}
+
+
+\section{Grafismo}
+
+\begin{frame}
+	\frametitle{The Gimp}
+	
+	\begin{columns}[c]
+		\column{150pt}
+		\begin{center}
+			\includegraphics[scale=0.3]{images/gimp.png}
+		\end{center}
+		\column{150pt}
+		Diseño gráfico
+	\end{columns}
+
+	\begin{columns}[c]
+		\column{150pt}
+		\begin{block}{Utilidad}
+			\begin{itemize}
+				\item Diseño de personajes
+				\item Escenarios
+				\item Montajes
+				\item Rótulos
+			\end{itemize}
+		\end{block}
+		\column{150pt}
+		\begin{center}
+			\includegraphics[scale=0.15]{images/escena-barrio.png}
+		\end{center}
+	\end{columns}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Inkscape}
+	
+	\begin{columns}[c]
+		\column{150pt}
+		\begin{center}
+			\includegraphics[scale=0.5]{images/inkscape.png}
+		\end{center}
+		\column{150pt}
+		Dibujo vectorial
+	\end{columns}
+
+	\begin{columns}[c]
+		\column{150pt}
+		\begin{block}{Utilidad}
+			\begin{itemize}
+				\item Personajes
+				\item Imágenes escalables
+				\item Logos
+			\end{itemize}
+		\end{block}
+		\column{150pt}
+		\begin{center}
+			\includegraphics[scale=0.05]{images/abuela.png}
+		\end{center}
+	\end{columns}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Synfig}
+	
+	\begin{columns}[c]
+		\column{150pt}
+		\begin{center}
+			\includegraphics[scale=0.4]{images/synfig.png}
+		\end{center}
+		\column{150pt}
+		Animación 2D
+	\end{columns}
+
+	\begin{center}
+		\includegraphics[scale=0.2]{images/granny-sprite.png}
+	\end{center}
+
+	\begin{columns}[c]
+		\column{150pt}
+		\begin{block}{Utilidad}
+			\begin{itemize}
+				\item Animaciones de los personajes
+				\item Escenas de vídeo
+			\end{itemize}
+		\end{block}
+		\column{150pt}
+		\begin{center}
+			\includegraphics[scale=0.1]{images/synfig-short.png}
+		\end{center}
+	\end{columns}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Blender}
+	
+	\begin{columns}[c]
+		\column{150pt}
+		\begin{center}
+			\includegraphics[scale=0.075]{images/blender.png}
+		\end{center}
+		\column{150pt}
+		Modelado y animación en 3D
+	\end{columns}
+
+	\begin{columns}[c]
+		\column{150pt}
+		\begin{block}{Utilidad}
+			\begin{itemize}
+				\item Personajes y escenarios en 3D
+				\item Animaciones
+				\item Escenas cinemáticas
+			\end{itemize}
+		\end{block}
+		\column{150pt}
+		\begin{center}
+			\includegraphics[scale=0.15]{images/ogre_sinbad.png}
+		\end{center}
+	\end{columns}
+\end{frame}
+
+\section{Audio}
+
+\begin{frame}
+	\frametitle{Audacity}
+	
+	\begin{columns}[c]
+		\column{150pt}
+		\begin{center}
+			\includegraphics[scale=0.1]{images/audacity.jpg}
+		\end{center}
+		\column{150pt}
+		Edición de sonido
+	\end{columns}
+
+	\begin{columns}[c]
+		\column{150pt}
+		\begin{block}{Utilidad}
+			\begin{itemize}
+				\item SFX (Efectos de sonido)
+				\item Voces
+				\item Banda sonora
+			\end{itemize}
+		\end{block}
+		\column{150pt}
+		\begin{center}
+			\includegraphics[scale=0.15]{images/audacity_screen.png}
+		\end{center}
+	\end{columns}
+\end{frame}
+
+\section{Programación}
+
+\begin{frame}
+	\frametitle{Simple DirectMedia Layer (SDL)}
+	
+	\begin{columns}[c]
+		\column{150pt}
+		\begin{center}
+			\includegraphics[scale=0.2]{images/sdl.jpeg}
+		\end{center}
+		\column{150pt}
+		Librería para desarrollar juegos 2D en C/C++
+	\end{columns}
+
+	\begin{columns}[c]
+		\column{150pt}
+		\begin{block}{Funcionalidades}
+			\begin{itemize}
+				\item Vídeo: imágenes, texto...
+				\item Gestión de eventos
+				\item Audio
+				\item Tiempo
+				\item Multiplataforma
+			\end{itemize}
+		\end{block}
+		\column{150pt}
+		\begin{center}
+			\includegraphics[scale=0.15]{images/granny-screen.png}
+		\end{center}
+	\end{columns}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Gosu}
+	
+	\begin{columns}[c]
+		\column{150pt}
+		\begin{center}
+			\includegraphics[scale=0.4]{images/gosu.png}
+		\end{center}
+		\column{150pt}
+		Una capa por encima de SDL con orientación a objetos y aceleración gráfica para C++ y Ruby
+	\end{columns}
+
+	\begin{columns}[c]
+		\column{150pt}
+		\begin{block}{Funcionalidades}
+			\begin{itemize}
+				\item Todas las de SDL
+				\item Más cómoda de usar
+				\item Aceleración gráfica
+			\end{itemize}
+		\end{block}
+		\column{150pt}
+		\begin{center}
+			\includegraphics[scale=0.15]{images/freeGemas.png}
+		\end{center}
+	\end{columns}
+\end{frame}
+
+
+
+\begin{frame}
+	\frametitle{PyGame}
+	
+	\begin{columns}[c]
+		\column{150pt}
+		\begin{center}
+			\includegraphics[scale=0.2]{images/pygame_logo.png}
+		\end{center}
+		\column{150pt}
+		Wrapper de SDL para Python
+	\end{columns}
+
+	\begin{columns}[c]
+		\column{150pt}
+		\begin{block}{Funcionalidades}
+			\begin{itemize}
+				\item Todas las de SDL
+				\item Más cómoda de usar
+				\item La potencia de Python
+			\end{itemize}
+		\end{block}
+		\column{150pt}
+		\begin{center}
+%			\includegraphics[scale=0.2]{images/resistencia-screen.png}
+			\includegraphics[scale=0.2]{images/dominous_game_v7.jpg}
+		\end{center}
+	\end{columns}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Ogre3D}
+	
+	\begin{columns}[c]
+		\column{150pt}
+		\begin{center}
+			\includegraphics[scale=0.07]{images/ogre.png}
+		\end{center}
+		\column{150pt}
+		Motor gráfico 3D para C++ multiplataforma
+	\end{columns}
+
+	\begin{columns}[c]
+		\column{150pt}
+		\begin{block}{Funcionalidades}
+			\begin{itemize}
+				\item Carga de modelos y texturas
+				\item Animaciones
+				\item Efectos
+				\item Arquitectura modular y extensible
+				\item Conversores para muchos formatos
+			\end{itemize}
+		\end{block}
+		\column{150pt}
+		\begin{center}
+			\includegraphics[scale=0.25]{images/freepadel-screen.png}
+		\end{center}
+	\end{columns}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Panda3D}
+	
+	\begin{columns}[c]
+		\column{150pt}
+		\begin{center}
+			\includegraphics[scale=0.15]{images/panda3d.png}
+		\end{center}
+		\column{150pt}
+		Motor gráfico 3D para Python y C++ multiplataforma
+	\end{columns}
+
+	\begin{columns}[c]
+		\column{150pt}
+		\begin{block}{Funcionalidades}
+			\begin{itemize}
+				\item Carga de modelos y texturas
+				\item Animaciones y efectos
+				\item Colisiones
+			\end{itemize}
+		\end{block}
+		\column{150pt}
+		\begin{center}
+			\includegraphics[scale=0.55]{images/pirates-screen.jpg}
+		\end{center}
+	\end{columns}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Otras librerías}
+
+	\begin{center}
+		\textbf{Hay muchísimas librerías}
+	\end{center}
+
+	\begin{columns}[c]
+		\column{150pt}
+		\begin{block}{2D}
+			\begin{itemize}
+				\item Allegro (C/C++)
+				\item JGame (Java)
+				\item ...
+			\end{itemize}
+		\end{block}
+		
+		\begin{center}
+			\includegraphics[scale=0.5]{images/allegro.png}
+		\end{center}
+		\column{150pt}
+		
+		\begin{center}
+			\includegraphics[scale=0.7]{images/Irrlicht.png}
+		\end{center}
+		
+		\begin{block}{3D}
+			\begin{itemize}
+				\item Irrlicht (C++)
+				\item Crystal Space (C++)
+				\item ...
+			\end{itemize}
+		\end{block}
+		
+	\end{columns}
+\end{frame}
+
+\section{Inteligencia Artificial}
+
+\begin{frame}
+	\frametitle{Inteligencia artificial (IA) para videojuegos}
+	
+	\begin{columns}[c]
+		\column{150pt}
+		\begin{block}{Programación}
+			\begin{itemize}
+				\item La programación de IA puede ser compleja ...
+				\item ... pero existen técnicas que pueden facilitarla
+				\item En la Universidad de Cádiz usamos un videojuego para aprender a programar IA con sistemas expertos basados en reglas\\                                
+			\end{itemize}
+                        \small{http://code.google.com/p/gsiege}
+		\end{block}
+		\column{150pt}
+		\begin{center}
+			\includegraphics[scale=0.9]{images/logo_gadesSiege.png}
+		\end{center}
+		\begin{center}
+			\includegraphics[scale=0.20]{images/gadesSiege.jpg}
+		\end{center}
+	\end{columns}
+\end{frame}
+
+\section{Juegos}
+
+\begin{frame}
+	\frametitle{¿Y se pueden hacer juegos buenos con esto?}
+
+	\begin{block}{En la UCA hacemos videojuegos }
+		\begin{itemize}
+			\item Como trabajo de la asignatura de ``Diseño de Videojuegos'' (muy pequeños, sirven para aprender)
+			\item Como Proyecto Fin de Carrera (individuales, tamaño pequeño-medio)
+		\end{itemize}
+	\end{block}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{La fuga de Nuremberg}
+	
+	\begin{center}
+		\includegraphics[width=\textwidth]{images/dv/fugadenuremberg.png}
+	\end{center}
+\end{frame}
+%% \begin{frame}
+%% 	\frametitle{La maldición de la ESI}
+	
+%% 	\begin{center}
+%% 		\includegraphics[width=\textwidth]{images/dv/maldiciondelaesi.png}
+%% 	\end{center}
+%% \end{frame}
+\begin{frame}
+	\frametitle{Free Fighter}
+	
+	\begin{center}
+		\includegraphics[width=\textwidth]{images/dv/xfreefighter.png}
+	\end{center}
+\end{frame}
+\begin{frame}
+	\frametitle{X-Soldiers}
+	
+	\begin{center}
+		\includegraphics[width=\textwidth]{images/dv/xsoldiers.png}
+	\end{center}
+\end{frame}
+\begin{frame}
+	\frametitle{Granny's Blood Bath}
+	
+	\begin{center}
+		\includegraphics[width=\textwidth]{images/dv/grannysbloodbath.png}
+	\end{center}
+\end{frame}
+\begin{frame}
+	\frametitle{Magic Duel}
+	
+	\begin{center}
+		\includegraphics[width=\textwidth]{images/dv/magicduel.png}
+	\end{center}
+\end{frame}
+\begin{frame}
+	\frametitle{Paxterminator}
+	
+	\begin{center}
+		\includegraphics[width=\textwidth]{images/dv/paxterminator.png}
+	\end{center}
+\end{frame}
+\begin{frame}
+	\frametitle{Sacred Labirians}
+	
+	\begin{center}
+		\includegraphics[width=\textwidth]{images/dv/labirains.png}
+	\end{center}
+\end{frame}
+\begin{frame}
+	\frametitle{Bomber Dream}
+	
+	\begin{center}
+		\includegraphics[width=\textwidth]{images/dv/bomberdream.png}
+	\end{center}
+\end{frame}
+\begin{frame}
+	\frametitle{Sim conducción}
+	
+	\begin{center}
+		\includegraphics[width=\textwidth]{images/dv/sim-conduccion.png}
+	\end{center}
+\end{frame}
+\begin{frame}
+	\frametitle{StarOgre}
+	
+	\begin{center}
+		\includegraphics[width=\textwidth]{images/dv/starogre.png}
+	\end{center}
+\end{frame}
+\begin{frame}
+	\frametitle{Space Penguin}
+	
+	\begin{center}
+		\includegraphics[width=\textwidth]{images/dv/spacepenguin.png}
+	\end{center}
+\end{frame}
+%% \begin{frame}
+%% 	\frametitle{UCA Volley}
+	
+%% 	\begin{center}
+%% 		\includegraphics[width=\textwidth]{images/dv/ucavolley.png}
+%% 	\end{center}
+%% \end{frame}
+\begin{frame}
+	\frametitle{No one can Kill the Metal}
+	
+	\begin{center}
+		\includegraphics[width=\textwidth]{images/dv/nocktmetal.png}
+	\end{center}
+\end{frame}
+\begin{frame}
+	\frametitle{SDL Golf}
+	
+	\begin{center}
+		\includegraphics[width=\textwidth]{images/dv/sdlgolf.png}
+	\end{center}
+\end{frame}
+\begin{frame}
+	\frametitle{Free Rummi}
+	
+	\begin{center}
+		\includegraphics[width=\textwidth]{images/dv/freerummi.png}
+	\end{center}
+\end{frame}
+\begin{frame}
+	\frametitle{Wii Duckhunt}
+	
+	\begin{center}
+		\includegraphics[width=\textwidth]{images/dv/wiiduckhunt.png}
+	\end{center}
+\end{frame}
+\begin{frame}
+	\frametitle{Wii Pang}
+	
+	\begin{center}
+		\includegraphics[width=\textwidth]{images/dv/wiipang.png}
+	\end{center}
+\end{frame}
+\begin{frame}
+	\frametitle{Wii Arkanoid}
+	
+	\begin{center}
+		\includegraphics[width=\textwidth]{images/dv/wiiarkanoid.png}
+	\end{center}
+\end{frame}
+\begin{frame}
+	\frametitle{Robinson 2.0}
+	
+	\begin{center}
+		\includegraphics[width=\textwidth]{images/dv/robinson.png}
+	\end{center}
+\end{frame}
+\begin{frame}
+	\frametitle{Gom}
+	
+	\begin{center}
+		\includegraphics[width=\textwidth]{images/dv/gom.png}
+	\end{center}
+\end{frame}
+\begin{frame}
+	\frametitle{Sion Tower}
+	
+	\begin{center}
+		\includegraphics[width=\textwidth]{images/dv/siontower.png}
+	\end{center}
+\end{frame}
+\begin{frame}
+	\frametitle{ZyCars}
+	
+	\begin{center}
+		\includegraphics[width=\textwidth]{images/dv/zycars.png}
+	\end{center}
+\end{frame}
+\begin{frame}
+	\frametitle{Steelwar}
+	
+	\begin{center}
+		\includegraphics[width=\textwidth]{images/dv/steelwar.png}
+	\end{center}
+\end{frame}
+\begin{frame}
+	\frametitle{Globulos Attack}
+	
+	\begin{center}
+		\includegraphics[width=\textwidth]{images/dv/glatack.png}
+	\end{center}
+\end{frame}
+\begin{frame}
+	\frametitle{Dominous}
+	
+	\begin{center}
+		\includegraphics[width=\textwidth]{images/dv/dominous.png}
+	\end{center}
+\end{frame}
+\begin{frame}
+	\frametitle{Free Padel}
+	
+	\begin{center}
+		\includegraphics[width=\textwidth]{images/dv/freepadel.png}
+	\end{center}
+\end{frame}
+\begin{frame}
+	\frametitle{Ballon Breakers}
+	
+	\begin{center}
+		\includegraphics[width=\textwidth]{images/dv/ballonbreakers.png}
+	\end{center}
+\end{frame}
+\begin{frame}
+	\frametitle{The Most Wanted}
+	
+	\begin{center}
+		\includegraphics[width=\textwidth]{images/dv/mostwanted.png}
+	\end{center}
+\end{frame}
+\begin{frame}
+	\frametitle{Laboon}
+	
+	\begin{center}
+		\includegraphics[width=\textwidth]{images/dv/laboon.png}
+	\end{center}
+\end{frame}
+
+\section{Conclusiones}
+
+\begin{frame}
+	\frametitle{Hay herramientas suficientes}
+	
+	\begin{center}
+		\includegraphics[scale=0.3]{images/nights0223-sonic-the-hedgehog.png}
+	\end{center}
+	
+	\begin{block}{Conclusiones}
+		\begin{itemize}
+			\item Hay herramientas en cada campo...
+			\item ...aunque algunos están más evolucionados que otros
+			\item Tenemos más que de sobra para hacer juegos con Software Libre
+		\end{itemize}
+	\end{block}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{}
+	
+	\begin{center}
+		\textbf{http://groups.google.com/group/advuca/}
+	\end{center}
+	
+	\begin{center}
+		\huge{\textbf{¡Muchas gracias por vuestra atención!}}
+	\end{center}
+	
+	\begin{center}
+		\huge{¿Dudas?}
+	\end{center}
+
+\end{frame}
+
+\section{Más info}
+
+\begin{frame}
+	\frametitle{The Gimp - Información adicional}
+	
+	\begin{block}{Tutoriales}
+		\begin{itemize}
+			\item http://www.gimp.org/tutorials/
+			\item http://www.gimp.org.es/
+		\end{itemize}
+	\end{block}
+	
+	\begin{center}
+		\includegraphics[scale=0.15]{images/gimp-screen.png}
+	\end{center}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Inkscape - Información adicional}
+	
+	\begin{block}{Tutoriales}
+		\begin{itemize}
+			\item http://www.inkscape.org/doc/basic/tutorial-basic.es.html
+			\item http://inkscapetutorials.wordpress.com/
+		\end{itemize}
+	\end{block}
+	
+	\begin{center}
+		\includegraphics[scale=0.15]{images/inkscape-screen.png}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Synfig - Información adicional}
+	
+	\begin{block}{Tutoriales}
+		\begin{itemize}
+			\item http://synfig.org/wiki/Main\_Page/es
+		\end{itemize}
+	\end{block}
+	
+	\begin{center}
+		\includegraphics[scale=0.15]{images/synfig-screen.png}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Blender - Información adicional}
+	
+	\begin{block}{Tutoriales}
+		\begin{itemize}
+			\item Aprende Blender en 24h
+			\item http://www.blender.org/education-help/tutorials/
+		\end{itemize}
+	\end{block}
+	
+	\begin{center}
+		\includegraphics[scale=0.15]{images/blender-screen.png}
+	\end{center}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{SDL - Información adicional}
+	
+	\begin{block}{Tutoriales}
+		\begin{itemize}
+			\item http://osl.uca.es/wikijuegos/
+			\item http://lazyfoo.net/SDL\_tutorials/index.php
+		\end{itemize}
+	\end{block}
+	
+	\begin{center}
+		\includegraphics[scale=0.4]{images/world-of-goo.jpg}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Gosu - Información adicional}
+	
+	\begin{block}{Tutoriales}
+		\begin{itemize}
+			\item http://libgosu.org
+		\end{itemize}
+	\end{block}
+	
+	\begin{center}
+		\includegraphics[scale=0.25]{images/oflute-screen2.png}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{PyGame - Información adicional}
+	
+	\begin{block}{Tutoriales}
+		\begin{itemize}
+			\item http://www.pygame.org/docs/
+			\item http://www.pygame.org/wiki/tutorials
+		\end{itemize}
+	\end{block}
+	
+	\begin{center}
+		\includegraphics[scale=0.25]{images/tanks-screen.jpg}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Ogre3D - Información adicional}
+	
+	\begin{block}{Tutoriales}
+		\begin{itemize}
+			\item http://osl2.uca.es/iberogre
+			\item http://ogre3d.org/tikiwiki/tiki-index.php
+		\end{itemize}
+	\end{block}
+	
+	\begin{center}
+		\includegraphics[scale=0.15]{images/torchlight-screen.jpg}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Panda3D - Información adicional}
+	
+	\begin{block}{Tutoriales}
+		\begin{itemize}
+			\item http://www.panda3d.org/wiki/index.php/Main\_Page
+		\end{itemize}
+	\end{block}
+	
+	\begin{center}
+		\includegraphics[scale=0.3]{images/flight-screen.jpg}
+	\end{center}
+\end{frame}
+
+\end{document}

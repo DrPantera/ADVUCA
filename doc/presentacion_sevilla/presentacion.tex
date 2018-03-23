@@ -1,0 +1,594 @@
+
+\documentclass{beamer}
+
+\usepackage[spanish]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage{graphicx}
+\usepackage{listings}
+
+\usetheme{Darmstadt}
+
+\title{Desarrollo de Videojuegos con Software Libre}
+\author{Manuel Palomo Duarte\\David Saltares Márquez}
+\date{Junio de 2010}
+
+
+\begin{document}
+
+\begin{frame}
+	\titlepage
+	
+	\begin{picture}(0,0)
+        \put(5,15){\includegraphics[scale=0.8]{images/logo_advuca.png}}
+    \end{picture}
+	
+	\begin{center}
+		\includegraphics[scale=1]{images/cc.png}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Índice de contenidos}
+	\tableofcontents
+\end{frame}
+
+\section{Quiero crear un juego}
+
+\begin{frame}
+	\frametitle{¿Qué necesito?}
+	
+	\begin{center}
+		\includegraphics[scale=0.3]{images/opensec-tux-mario.png}
+	\end{center}
+	
+	\begin{center}
+		Quiero crear un juego, ¿y ahora qué?
+	\end{center}
+	
+	\begin{block}{Necesitamos}
+		\begin{itemize}
+			\item \emph{Hardware}: el equipo más barato nos sirve
+			\item \emph{Software}: veremos si es posible con Software Libre
+			\item \emph{\textbf{¡Muchas ganas!}}: lo más importante
+		\end{itemize}
+	\end{block}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Elementos del desarrollo}
+	
+	\begin{center}
+		\includegraphics[scale=0.1]{images/uttaresh-batman-the-dark-knight.png}
+	\end{center}
+	
+	
+	\begin{block}{Elementos}
+		\begin{itemize}
+			\item Planificación
+			\item Grafismo
+			\item Sonido
+			\item Programación
+		\end{itemize}
+	\end{block}
+\end{frame}
+
+\section{Planificación}
+
+\begin{frame}
+	\frametitle{Planner}
+
+	\begin{block}{Utilidad}
+		\begin{itemize}
+			\item Definir tareas
+			\item Precedencia entre tareas
+			\item Asignar tareas
+		\end{itemize}
+	\end{block}
+	
+	\begin{center}
+		\includegraphics[scale=0.15]{images/planner-screen.png}
+	\end{center}
+\end{frame}
+
+
+\section{Grafismo}
+
+\begin{frame}
+	\frametitle{The Gimp}
+	
+	\begin{columns}[c]
+		\column{150pt}
+		\begin{center}
+			\includegraphics[scale=0.3]{images/gimp.png}
+		\end{center}
+		\column{150pt}
+		Diseño gráfico
+	\end{columns}
+
+	\begin{columns}[c]
+		\column{150pt}
+		\begin{block}{Utilidad}
+			\begin{itemize}
+				\item Diseño de personajes
+				\item Escenarios
+				\item Montajes
+				\item Rótulos
+			\end{itemize}
+		\end{block}
+		\column{150pt}
+		\begin{center}
+			\includegraphics[scale=0.15]{images/escena-barrio.png}
+		\end{center}
+	\end{columns}
+\end{frame}
+
+\begin{frame}
+	\frametitle{The Gimp - Información adicional}
+	
+	\begin{block}{Tutoriales}
+		\begin{itemize}
+			\item http://www.gimp.org/tutorials/
+			\item http://www.gimp.org.es/
+		\end{itemize}
+	\end{block}
+	
+	\begin{center}
+		\includegraphics[scale=0.15]{images/gimp-screen.png}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Inkscape}
+	
+	\begin{columns}[c]
+		\column{150pt}
+		\begin{center}
+			\includegraphics[scale=0.5]{images/inkscape.png}
+		\end{center}
+		\column{150pt}
+		Dibujo vectorial
+	\end{columns}
+
+	\begin{columns}[c]
+		\column{150pt}
+		\begin{block}{Utilidad}
+			\begin{itemize}
+				\item Personajes
+				\item Imágenes escalables
+				\item Logos
+			\end{itemize}
+		\end{block}
+		\column{150pt}
+		\begin{center}
+			\includegraphics[scale=0.05]{images/abuela.png}
+		\end{center}
+	\end{columns}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Inkscape - Información adicional}
+	
+	\begin{block}{Tutoriales}
+		\begin{itemize}
+			\item http://www.inkscape.org/doc/basic/tutorial-basic.es.html
+			\item http://inkscapetutorials.wordpress.com/
+		\end{itemize}
+	\end{block}
+	
+	\begin{center}
+		\includegraphics[scale=0.15]{images/inkscape-screen.png}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Synfig}
+	
+	\begin{columns}[c]
+		\column{150pt}
+		\begin{center}
+			\includegraphics[scale=0.4]{images/synfig.png}
+		\end{center}
+		\column{150pt}
+		Animación 2D
+	\end{columns}
+
+	\begin{center}
+		\includegraphics[scale=0.2]{images/granny-sprite.png}
+	\end{center}
+
+	\begin{columns}[c]
+		\column{150pt}
+		\begin{block}{Utilidad}
+			\begin{itemize}
+				\item Animaciones de los personajes
+				\item Escenas de vídeo
+			\end{itemize}
+		\end{block}
+		\column{150pt}
+		\begin{center}
+			\includegraphics[scale=0.1]{images/synfig-short.png}
+		\end{center}
+	\end{columns}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Synfig - Información adicional}
+	
+	\begin{block}{Tutoriales}
+		\begin{itemize}
+			\item http://synfig.org/wiki/Main\_Page/es
+		\end{itemize}
+	\end{block}
+	
+	\begin{center}
+		\includegraphics[scale=0.15]{images/synfig-screen.png}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Blender}
+	
+	\begin{columns}[c]
+		\column{150pt}
+		\begin{center}
+			\includegraphics[scale=0.075]{images/blender.png}
+		\end{center}
+		\column{150pt}
+		Modelado y animación en 3D
+	\end{columns}
+
+	\begin{columns}[c]
+		\column{150pt}
+		\begin{block}{Utilidad}
+			\begin{itemize}
+				\item Personajes y escenarios en 3D
+				\item Animaciones
+				\item Escenas cinemáticas
+			\end{itemize}
+		\end{block}
+		\column{150pt}
+		\begin{center}
+			\includegraphics[scale=0.15]{images/ogre_sinbad.png}
+		\end{center}
+	\end{columns}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Blender - Información adicional}
+	
+	\begin{block}{Tutoriales}
+		\begin{itemize}
+			\item Aprende Blender en 24h
+			\item http://www.blender.org/education-help/tutorials/
+		\end{itemize}
+	\end{block}
+	
+	\begin{center}
+		\includegraphics[scale=0.15]{images/blender-screen.png}
+	\end{center}
+\end{frame}
+
+\section{Audio}
+
+\begin{frame}
+	\frametitle{Audacity}
+	
+	\begin{columns}[c]
+		\column{150pt}
+		\begin{center}
+			\includegraphics[scale=0.1]{images/audacity.jpg}
+		\end{center}
+		\column{150pt}
+		Edición de sonido
+	\end{columns}
+
+	\begin{columns}[c]
+		\column{150pt}
+		\begin{block}{Utilidad}
+			\begin{itemize}
+				\item SFX (Efectos de sonido)
+				\item Voces
+				\item Banda sonora
+			\end{itemize}
+		\end{block}
+		\column{150pt}
+		\begin{center}
+			\includegraphics[scale=0.15]{images/audacity_screen.png}
+		\end{center}
+	\end{columns}
+\end{frame}
+
+\section{Programación}
+
+\begin{frame}
+	\frametitle{Simple DirectMedia Layer (SDL)}
+	
+	\begin{columns}[c]
+		\column{150pt}
+		\begin{center}
+			\includegraphics[scale=0.2]{images/sdl.jpeg}
+		\end{center}
+		\column{150pt}
+		Librería para desarrollar juegos 2D en C/C++
+	\end{columns}
+
+	\begin{columns}[c]
+		\column{150pt}
+		\begin{block}{Funcionalidades}
+			\begin{itemize}
+				\item Vídeo: imágenes, texto...
+				\item Gestión de eventos
+				\item Audio
+				\item Tiempo
+				\item Multiplataforma
+			\end{itemize}
+		\end{block}
+		\column{150pt}
+		\begin{center}
+			\includegraphics[scale=0.15]{images/granny-screen.png}
+		\end{center}
+	\end{columns}
+\end{frame}
+
+\begin{frame}
+	\frametitle{SDL - Información adicional}
+	
+	\begin{block}{Tutoriales}
+		\begin{itemize}
+			\item http://osl.uca.es/wikijuegos/
+			\item http://lazyfoo.net/SDL\_tutorials/index.php
+		\end{itemize}
+	\end{block}
+	
+	\begin{center}
+		\includegraphics[scale=0.4]{images/world-of-goo.jpg}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Gosu}
+	
+	\begin{columns}[c]
+		\column{150pt}
+		\begin{center}
+			\includegraphics[scale=0.4]{images/gosu.png}
+		\end{center}
+		\column{150pt}
+		Una capa por encima de SDL con orientación a objetos y aceleración gráfica para C++ y Ruby
+	\end{columns}
+
+	\begin{columns}[c]
+		\column{150pt}
+		\begin{block}{Funcionalidades}
+			\begin{itemize}
+				\item Todas las de SDL
+				\item Más cómoda de usar
+				\item Aceleración gráfica
+			\end{itemize}
+		\end{block}
+		\column{150pt}
+		\begin{center}
+			\includegraphics[scale=0.15]{images/freeGemas.png}
+		\end{center}
+	\end{columns}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Gosu - Información adicional}
+	
+	\begin{block}{Tutoriales}
+		\begin{itemize}
+			\item http://libgosu.org
+		\end{itemize}
+	\end{block}
+	
+	\begin{center}
+		\includegraphics[scale=0.25]{images/oflute-screen2.png}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{PyGame}
+	
+	\begin{columns}[c]
+		\column{150pt}
+		\begin{center}
+			\includegraphics[scale=0.2]{images/pygame_logo.png}
+		\end{center}
+		\column{150pt}
+		Wrapper de SDL para Python
+	\end{columns}
+
+	\begin{columns}[c]
+		\column{150pt}
+		\begin{block}{Funcionalidades}
+			\begin{itemize}
+				\item Todas las de SDL
+				\item Más cómoda de usar
+				\item La potencia de Python
+			\end{itemize}
+		\end{block}
+		\column{150pt}
+		\begin{center}
+%			\includegraphics[scale=0.2]{images/resistencia-screen.png}
+			\includegraphics[scale=0.2]{images/dominous_game_v7.jpg}
+		\end{center}
+	\end{columns}
+\end{frame}
+
+\begin{frame}
+	\frametitle{PyGame - Información adicional}
+	
+	\begin{block}{Tutoriales}
+		\begin{itemize}
+			\item http://www.pygame.org/docs/
+			\item http://www.pygame.org/wiki/tutorials
+		\end{itemize}
+	\end{block}
+	
+	\begin{center}
+		\includegraphics[scale=0.25]{images/tanks-screen.jpg}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Ogre3D}
+	
+	\begin{columns}[c]
+		\column{150pt}
+		\begin{center}
+			\includegraphics[scale=0.07]{images/ogre.png}
+		\end{center}
+		\column{150pt}
+		Motor gráfico 3D para C++ multiplataforma
+	\end{columns}
+
+	\begin{columns}[c]
+		\column{150pt}
+		\begin{block}{Funcionalidades}
+			\begin{itemize}
+				\item Carga de modelos y texturas
+				\item Animaciones
+				\item Efectos
+				\item Arquitectura modular y extensible
+				\item Conversores para muchos formatos
+			\end{itemize}
+		\end{block}
+		\column{150pt}
+		\begin{center}
+			\includegraphics[scale=0.25]{images/freepadel-screen.png}
+		\end{center}
+	\end{columns}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Ogre3D - Información adicional}
+	
+	\begin{block}{Tutoriales}
+		\begin{itemize}
+			\item http://osl2.uca.es/iberogre
+			\item http://ogre3d.org/tikiwiki/tiki-index.php
+		\end{itemize}
+	\end{block}
+	
+	\begin{center}
+		\includegraphics[scale=0.15]{images/torchlight-screen.jpg}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Panda3D}
+	
+	\begin{columns}[c]
+		\column{150pt}
+		\begin{center}
+			\includegraphics[scale=0.15]{images/panda3d.png}
+		\end{center}
+		\column{150pt}
+		Motor gráfico 3D para Python y C++ multiplataforma
+	\end{columns}
+
+	\begin{columns}[c]
+		\column{150pt}
+		\begin{block}{Funcionalidades}
+			\begin{itemize}
+				\item Carga de modelos y texturas
+				\item Animaciones y efectos
+				\item Colisiones
+			\end{itemize}
+		\end{block}
+		\column{150pt}
+		\begin{center}
+			\includegraphics[scale=0.55]{images/pirates-screen.jpg}
+		\end{center}
+	\end{columns}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Panda3D - Información adicional}
+	
+	\begin{block}{Tutoriales}
+		\begin{itemize}
+			\item http://www.panda3d.org/wiki/index.php/Main\_Page
+		\end{itemize}
+	\end{block}
+	
+	\begin{center}
+		\includegraphics[scale=0.3]{images/flight-screen.jpg}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Otras librerías}
+
+	\begin{center}
+		\textbf{Hay muchísimas librerías}
+	\end{center}
+
+	\begin{columns}[c]
+		\column{150pt}
+		\begin{block}{2D}
+			\begin{itemize}
+				\item Allegro (C/C++)
+				\item JGame (Java)
+				\item ...
+			\end{itemize}
+		\end{block}
+		
+		\begin{center}
+			\includegraphics[scale=0.5]{images/allegro.png}
+		\end{center}
+		\column{150pt}
+		
+		\begin{center}
+			\includegraphics[scale=0.7]{images/Irrlicht.png}
+		\end{center}
+		
+		\begin{block}{3D}
+			\begin{itemize}
+				\item Irrlicht (C++)
+				\item Crystal Space (C++)
+				\item ...
+			\end{itemize}
+		\end{block}
+		
+	\end{columns}
+\end{frame}
+
+\section{Conclusiones}
+
+\begin{frame}
+	\frametitle{Hay herramientas suficientes}
+	
+	\begin{center}
+		\includegraphics[scale=0.3]{images/nights0223-sonic-the-hedgehog.png}
+	\end{center}
+	
+	\begin{block}{Conclusiones}
+		\begin{itemize}
+			\item Hay herramientas en cada campo...
+			\item ...aunque algunos están más evolucionados que otros
+			\item Tenemos más que de sobra para hacer juegos con Software Libre
+		\end{itemize}
+	\end{block}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{}
+	
+	\begin{center}
+		\textbf{http://groups.google.com/group/advuca/}
+	\end{center}
+	
+	\begin{center}
+		\huge{\textbf{¡Muchas gracias por vuestra atención!}}
+	\end{center}
+	
+	\begin{center}
+		\huge{¿Dudas?}
+	\end{center}
+
+\end{frame}
+
+\end{document}

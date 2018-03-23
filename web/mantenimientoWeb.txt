@@ -1,0 +1,40 @@
+Los ficheros que hay en este directorio se utilizan para mantener la
+página web del proyecto "matdocenuca", http://matdocenuca.forja.rediris.es/.
+
+El texto original de la paǵina está en texto restructurado (en
+Debian/Ubuntu, paquete python-docutils), dentro del fichero
+index.rst. Para generar el contenido html (automáticamente, a partir
+del fichero rst), escribir: 
+
+,----
+| $ make
+`----
+
+Para subir el contenido a la web escribir:
+
+,----
+| $ make upload
+`----
+
+Se pedirá la contraseña del usuario que creó el proyecto
+"matdocenuca". 
+
+Si se quiere añadir algún otro contenido a la web, de puede ejecutar:
+
+,----
+| $ scp <fichero> matdocenuca@forja.rediris.es/htdocs
+`----
+
+O bien, añadirlo a la variable INSTALLFILES del fichero Makefile.
+
+Para ver los ficheros que hay en el sitio web, escribir:
+
+,----
+| $ ssh matdocenuca@forja.rediris.es ls /htdocs
+`----
+
+O bien, ejecutar:
+
+,----
+| $ make ls
+`----
