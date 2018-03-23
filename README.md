@@ -4,8 +4,9 @@ Repositorio de materiales (principalmente documentación) de la Asociación de D
 
 Otras direcciones donde encontrar materiales de la Asociación:
 
-* https://talleradvuca.wordpress.com
+* https://groups.google.com/forum/#!forum/advuca (lista de correo)
 * https://videojuegosuca.wordpress.com
+* https://talleradvuca.wordpress.com
 * https://es.scribd.com/document/47413209/presentacion
 * https://es-es.facebook.com/ADVUCA
 * https://twitter.com/TuringAdventure
